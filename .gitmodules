@@ -1,0 +1,3 @@
+[submodule "locality_aware"]
+	path = locality_aware
+	url = https://github.com/mpi-advance/locality_aware.git
