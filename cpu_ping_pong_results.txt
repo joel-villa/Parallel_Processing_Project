@@ -1,0 +1,42 @@
+Inter-node Results:
+Rank 0  2^0 doubles (8 bytes):  1.282000e-06 sec/message
+Rank 0  2^1 doubles (16 bytes):  1.260500e-06 sec/message
+Rank 0  2^2 doubles (32 bytes):  1.293500e-06 sec/message
+Rank 0  2^3 doubles (64 bytes):  1.441500e-06 sec/message
+Rank 0  2^4 doubles (128 bytes):  1.450000e-06 sec/message
+Rank 0  2^5 doubles (256 bytes):  2.253500e-06 sec/message
+Rank 0  2^6 doubles (512 bytes):  1.728000e-06 sec/message
+Rank 0  2^7 doubles (1024 bytes):  1.853500e-06 sec/message
+Rank 0  2^8 doubles (2048 bytes):  2.527000e-06 sec/message
+Rank 0  2^9 doubles (4096 bytes):  3.089500e-06 sec/message
+Rank 0  2^10 doubles (8192 bytes):  3.858000e-06 sec/message
+Rank 0  2^11 doubles (16384 bytes):  3.941000e-06 sec/message
+Rank 0  2^12 doubles (32768 bytes):  4.743000e-06 sec/message
+Rank 0  2^13 doubles (65536 bytes):  6.352000e-06 sec/message
+Rank 0  2^14 doubles (131072 bytes):  9.596000e-06 sec/message
+Rank 0  2^15 doubles (262144 bytes):  1.572950e-05 sec/message
+Rank 0  2^16 doubles (524288 bytes):  2.630550e-05 sec/message
+Rank 0  2^17 doubles (1048576 bytes):  4.760050e-05 sec/message
+Rank 0  2^18 doubles (2097152 bytes):  9.027650e-05 sec/message
+
+Intra-node Results:
+Rank 0  2^0 doubles (8 bytes):  1.985000e-07 sec/message
+Rank 0  2^1 doubles (16 bytes):  2.110000e-07 sec/message
+Rank 0  2^2 doubles (32 bytes):  2.005000e-07 sec/message
+Rank 0  2^3 doubles (64 bytes):  1.995000e-07 sec/message
+Rank 0  2^4 doubles (128 bytes):  6.230000e-07 sec/message
+Rank 0  2^5 doubles (256 bytes):  4.375000e-07 sec/message
+Rank 0  2^6 doubles (512 bytes):  5.630000e-07 sec/message
+Rank 0  2^7 doubles (1024 bytes):  7.180000e-07 sec/message
+Rank 0  2^8 doubles (2048 bytes):  9.870000e-07 sec/message
+Rank 0  2^9 doubles (4096 bytes):  1.621500e-06 sec/message
+Rank 0  2^10 doubles (8192 bytes):  1.843000e-06 sec/message
+Rank 0  2^11 doubles (16384 bytes):  3.139500e-06 sec/message
+Rank 0  2^12 doubles (32768 bytes):  5.060500e-06 sec/message
+Rank 0  2^13 doubles (65536 bytes):  7.528000e-06 sec/message
+Rank 0  2^14 doubles (131072 bytes):  1.213550e-05 sec/message
+Rank 0  2^15 doubles (262144 bytes):  9.888000e-06 sec/message
+Rank 0  2^16 doubles (524288 bytes):  1.521500e-05 sec/message
+Rank 0  2^17 doubles (1048576 bytes):  2.566200e-05 sec/message
+Rank 0  2^18 doubles (2097152 bytes):  7.606800e-05 sec/message
+
