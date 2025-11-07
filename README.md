@@ -7,13 +7,20 @@ To clone the microbenchmarks along with this repo, run this command after clonin
 git submodule update --init --recursive
 ```
 
-## Running Tests
+### Running Tests
 ```
 mkdir build
 cd build
 cmake ..
 make all
 make tests
+```
+
+### Update main directories CMake lines 27 & 28
+
+```
+set(MPIRUN "srun" CACHE STRING "MPIRUN command")
+set(CUDA_ARCH "90" CACHE STRING "CUDA Architecture")
 ```
 
 ### OpenMPI Micro Benchmarks
