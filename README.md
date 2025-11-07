@@ -7,5 +7,14 @@ To clone the microbenchmarks along with this repo, run this command after clonin
 git submodule update --init --recursive
 ```
 
+## Running Tests
+```
+mkdir build
+cd build
+cmake ..
+make all
+make tests
+```
+
 ### OpenMPI Micro Benchmarks
 https://github.com/mpi-advance/locality_aware/tree/microbenchmarks/benchmarks
