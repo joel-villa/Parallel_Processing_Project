@@ -11,8 +11,9 @@ git submodule update --init --recursive
 ```
 mkdir build
 cd build
-cmake ..
+ccmake .. ## change CUDA to ON, MPI to srun, CUDA_ARCH to 90
 make all
+make install
 make tests
 ```
 
