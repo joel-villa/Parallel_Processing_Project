@@ -17,6 +17,13 @@ make install ## might not be needed
 make 
 ```
 
+### Numbers She Said to use in benchmarks/microbenchmarks.cpp for Easley
+#define NODES 2 //number of nodes
+#define SPN 2   //number of sockets per node
+#define PPNUMA 32 // number of processes per NUMA region
+#define PPS 32  //number of processes per socket
+#define PPN 64 //number of processes per node
+
 ### History
  974  cd benchmarks/
   975  ls
