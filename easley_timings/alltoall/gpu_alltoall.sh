@@ -6,6 +6,7 @@
 #SBATCH --time=00:45:00
 #SBATCH --output=gpu_alltoall.out
 #SBATCH --error=gpu_alltoall.err
+#SBATCH -G1
 
 module load openmpi/4.1.7-cuda-6zaq
 

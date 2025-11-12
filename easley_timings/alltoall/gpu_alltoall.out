@@ -1,3 +1,122 @@
-To request GPUs, add --gpus-per-node X or --gpus X, where X is the desired number of GPUs.
-Job 107757 running on easley052
+You have been allocated one or more GPUs.
+Job 112736 running on easley051
 Testing Size 1
+PMPI_Alltoall Time 7.371147e-06
+GPU-Aware Pairwise Exchange Time 6.870522e-04
+GPU-Aware Nonblocking Time 6.864572e-04
+Copy-to-CPU Pairwise Exchange Time 6.987214e-04
+Copy-to-CPU Nonblocking Time 6.987074e-04
+Testing Size 2
+PMPI_Alltoall Time 7.363185e-06
+GPU-Aware Pairwise Exchange Time 6.856073e-04
+GPU-Aware Nonblocking Time 6.863279e-04
+Copy-to-CPU Pairwise Exchange Time 6.972971e-04
+Copy-to-CPU Nonblocking Time 6.983300e-04
+Testing Size 4
+PMPI_Alltoall Time 7.361157e-06
+GPU-Aware Pairwise Exchange Time 6.856778e-04
+GPU-Aware Nonblocking Time 6.860292e-04
+Copy-to-CPU Pairwise Exchange Time 6.979407e-04
+Copy-to-CPU Nonblocking Time 6.982004e-04
+Testing Size 8
+PMPI_Alltoall Time 7.364657e-06
+GPU-Aware Pairwise Exchange Time 6.845764e-04
+GPU-Aware Nonblocking Time 6.857140e-04
+Copy-to-CPU Pairwise Exchange Time 6.975813e-04
+Copy-to-CPU Nonblocking Time 6.985613e-04
+Testing Size 16
+PMPI_Alltoall Time 7.362917e-06
+GPU-Aware Pairwise Exchange Time 6.851729e-04
+GPU-Aware Nonblocking Time 6.863580e-04
+Copy-to-CPU Pairwise Exchange Time 6.985528e-04
+Copy-to-CPU Nonblocking Time 6.985036e-04
+Testing Size 32
+PMPI_Alltoall Time 7.356881e-06
+GPU-Aware Pairwise Exchange Time 6.842542e-04
+GPU-Aware Nonblocking Time 6.851268e-04
+Copy-to-CPU Pairwise Exchange Time 6.973423e-04
+Copy-to-CPU Nonblocking Time 6.990171e-04
+Testing Size 64
+PMPI_Alltoall Time 7.385159e-06
+GPU-Aware Pairwise Exchange Time 6.845944e-04
+GPU-Aware Nonblocking Time 6.854083e-04
+Copy-to-CPU Pairwise Exchange Time 6.979871e-04
+Copy-to-CPU Nonblocking Time 6.991852e-04
+Testing Size 128
+PMPI_Alltoall Time 7.388837e-06
+GPU-Aware Pairwise Exchange Time 6.854029e-04
+GPU-Aware Nonblocking Time 6.860709e-04
+Copy-to-CPU Pairwise Exchange Time 6.985840e-04
+Copy-to-CPU Nonblocking Time 6.991420e-04
+Testing Size 256
+PMPI_Alltoall Time 7.389716e-06
+GPU-Aware Pairwise Exchange Time 6.847766e-04
+GPU-Aware Nonblocking Time 6.851120e-04
+Copy-to-CPU Pairwise Exchange Time 6.980454e-04
+Copy-to-CPU Nonblocking Time 6.996042e-04
+Testing Size 512
+PMPI_Alltoall Time 7.397343e-06
+GPU-Aware Pairwise Exchange Time 6.846961e-04
+GPU-Aware Nonblocking Time 6.843392e-04
+Copy-to-CPU Pairwise Exchange Time 6.984976e-04
+Copy-to-CPU Nonblocking Time 7.378021e-04
+Testing Size 1024
+PMPI_Alltoall Time 7.416003e-06
+GPU-Aware Pairwise Exchange Time 6.838248e-04
+GPU-Aware Nonblocking Time 6.856143e-04
+Copy-to-CPU Pairwise Exchange Time 7.011740e-04
+Copy-to-CPU Nonblocking Time 7.571471e-04
+Testing Size 2048
+PMPI_Alltoall Time 7.479695e-06
+GPU-Aware Pairwise Exchange Time 6.857002e-04
+GPU-Aware Nonblocking Time 6.860100e-04
+Copy-to-CPU Pairwise Exchange Time 7.003597e-04
+Copy-to-CPU Nonblocking Time 7.602690e-04
+Testing Size 4096
+PMPI_Alltoall Time 7.621184e-06
+GPU-Aware Pairwise Exchange Time 6.836948e-04
+GPU-Aware Nonblocking Time 6.822670e-04
+Copy-to-CPU Pairwise Exchange Time 7.021022e-04
+Copy-to-CPU Nonblocking Time 7.624456e-04
+Testing Size 8192
+PMPI_Alltoall Time 7.645173e-06
+GPU-Aware Pairwise Exchange Time 6.879169e-04
+GPU-Aware Nonblocking Time 6.893121e-04
+Copy-to-CPU Pairwise Exchange Time 7.129453e-04
+Copy-to-CPU Nonblocking Time 7.692210e-04
+Testing Size 16384
+PMPI_Alltoall Time 7.704429e-06
+GPU-Aware Pairwise Exchange Time 6.917843e-04
+GPU-Aware Nonblocking Time 6.923034e-04
+Copy-to-CPU Pairwise Exchange Time 7.231965e-04
+Copy-to-CPU Nonblocking Time 7.809033e-04
+Testing Size 32768
+PMPI_Alltoall Time 7.724955e-06
+GPU-Aware Pairwise Exchange Time 7.003560e-04
+GPU-Aware Nonblocking Time 7.009618e-04
+Copy-to-CPU Pairwise Exchange Time 8.060664e-04
+Copy-to-CPU Nonblocking Time 8.075441e-04
+Testing Size 65536
+PMPI_Alltoall Time 7.887628e-06
+GPU-Aware Pairwise Exchange Time 7.163912e-04
+GPU-Aware Nonblocking Time 7.179974e-04
+Copy-to-CPU Pairwise Exchange Time 8.552497e-04
+Copy-to-CPU Nonblocking Time 8.549010e-04
+Testing Size 131072
+PMPI_Alltoall Time 7.923775e-06
+GPU-Aware Pairwise Exchange Time 7.454135e-04
+GPU-Aware Nonblocking Time 7.457572e-04
+Copy-to-CPU Pairwise Exchange Time 9.643857e-04
+Copy-to-CPU Nonblocking Time 9.631673e-04
+Testing Size 262144
+PMPI_Alltoall Time 8.183318e-06
+GPU-Aware Pairwise Exchange Time 1.520770e-03
+GPU-Aware Nonblocking Time 1.520328e-03
+Copy-to-CPU Pairwise Exchange Time 1.862845e-03
+Copy-to-CPU Nonblocking Time 1.864799e-03
+Testing Size 524288
+PMPI_Alltoall Time 8.881558e-06
+GPU-Aware Pairwise Exchange Time 2.946504e-03
+GPU-Aware Nonblocking Time 2.960296e-03
+Copy-to-CPU Pairwise Exchange Time 3.445407e-03
+Copy-to-CPU Nonblocking Time 3.460144e-03
