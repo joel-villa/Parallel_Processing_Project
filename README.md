@@ -1,6 +1,12 @@
 # Parallel_Processing_Project
 Communication Performance, CPU v GPU
 
+## Notes on the Locality Aware Directory
+
+- Important file: locality_aware/include/locality_aware.h
+
+- The "v" in PMPI_Alltoallv and MPIX_Alltoallv stands for vectorized
+
 ## Micro Benchmarks
 To clone the microbenchmarks along with this repo, run this command after cloning:
 ```
