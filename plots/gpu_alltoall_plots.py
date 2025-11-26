@@ -20,10 +20,10 @@ MPIX_VECTORIZED_TIMES = [1.966063e-04, 2.011106e-04, 2.140012e-04, 2.545202e-04,
 # Plot the GPU times
 def plot_gpu_alltoall():
     #graph
-    plt.plot(TEST_SIZE, GPU_P_WISE_TIMES,       '-o', label="GPU-Aware Pairwise Exchange",   markersize=3)
-    plt.plot(TEST_SIZE, GPU_NON_BLOCKING_TIMES, '-*', label="GPU-Aware Nonblocking",         markersize=3)
-    plt.plot(TEST_SIZE, CTC_P_WISE_TIMES,       ':s', label="Copy-to-CPU Pairwise Exchange", markersize=3)
-    plt.plot(TEST_SIZE, CTC_NON_BLOCKING_TIMES, ':+', label="Copy-to-CPU Nonblocking",       markersize=3)
+    plt.plot(TEST_SIZE, GPU_P_WISE_TIMES,       '-o',  label="GPU-Aware Pairwise Exchange",   markersize=3)
+    plt.plot(TEST_SIZE, GPU_NON_BLOCKING_TIMES, '--*', label="GPU-Aware Nonblocking",         markersize=3)
+    plt.plot(TEST_SIZE, CTC_P_WISE_TIMES,       '-s',  label="Copy-to-CPU Pairwise Exchange", markersize=3)
+    plt.plot(TEST_SIZE, CTC_NON_BLOCKING_TIMES, '--+', label="Copy-to-CPU Nonblocking",       markersize=3)
     plt.xlabel("n")
     plt.xscale('log', base=2) # Set x-axis to logarithmic scale
     # plt.yscale('log', base=10) # Set y-axis to logarithmic scale
@@ -33,10 +33,10 @@ def plot_gpu_alltoall():
 
 def plot_cpu_alltoall():
     #graph
-    plt.plot(TEST_SIZE_MPI, PMPI_TIMES,       '-o', label="MPI Alltoall",   markersize=3)
-    plt.plot(TEST_SIZE_MPI, MPIX_TIMES, '-*', label="MPIX Alltoall",         markersize=3)
-    plt.plot(TEST_SIZE_MPI, PMPI_VECTORIZED_TIMES,       ':s', label="MPI Alltoallv", markersize=3)
-    plt.plot(TEST_SIZE_MPI, MPIX_VECTORIZED_TIMES, ':+', label="MPIX Alltoallv",       markersize=3)
+    plt.plot(TEST_SIZE_MPI, PMPI_TIMES,            '-o',  label="MPI Alltoall",   markersize=3)
+    plt.plot(TEST_SIZE_MPI, MPIX_TIMES,            '-*',  label="MPIX Alltoall",         markersize=3)
+    plt.plot(TEST_SIZE_MPI, PMPI_VECTORIZED_TIMES, '--s', label="MPI Alltoallv", markersize=3)
+    plt.plot(TEST_SIZE_MPI, MPIX_VECTORIZED_TIMES, '--+', label="MPIX Alltoallv",       markersize=3)
     plt.xlabel("n")
     plt.xscale('log', base=2) # Set x-axis to logarithmic scale
     # plt.yscale('log', base=10) # Set y-axis to logarithmic scale
