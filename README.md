@@ -3,10 +3,16 @@ Communication Performance, CPU v GPU
 
 ## Notes on the Locality Aware Directory
 
-- Important file: locality_aware/include/locality_aware.h
+- Important file for some basic comments: locality_aware/include/locality_aware.h
+- The "v" in PMPI_Alltoallv and MPIX_Alltoallv stands for variable size, we are going to not worry about this implementation
+- PMPI calls the underlying MPI implementation.
+- MPIX can be changed to any of their all-to-all implementations by editing the constant at the top of locality_aware/src/collective
+/alltoall.c
+- IMPORTANT: in src/heterogeneous/gpu_alltoall.c
+  - Edit `gpu_aware_alltoall()` to have only the following line:
+    `int ierr = f(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm);`
+  - Edit `copy_to_cpu_alltoall()` to call malloc and free instead of gpuMallocHost and gpuFreeHost
 
-- The "v" in PMPI_Alltoallv and MPIX_Alltoallv stands for vectorized
-- PMPI Calls the underlying MPI implementation. 
 
 ## Micro Benchmarks
 To clone the microbenchmarks along with this repo, run this command after cloning:
