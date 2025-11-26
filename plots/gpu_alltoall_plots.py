@@ -34,9 +34,9 @@ def plot_gpu_alltoall():
 def plot_cpu_alltoall():
     #graph
     plt.plot(TEST_SIZE_MPI, PMPI_TIMES,            '-o',  label="MPI Alltoall",   markersize=3)
-    plt.plot(TEST_SIZE_MPI, MPIX_TIMES,            '-*',  label="MPIX Alltoall",         markersize=3)
-    plt.plot(TEST_SIZE_MPI, PMPI_VECTORIZED_TIMES, '--s', label="MPI Alltoallv", markersize=3)
-    plt.plot(TEST_SIZE_MPI, MPIX_VECTORIZED_TIMES, '--+', label="MPIX Alltoallv",       markersize=3)
+    plt.plot(TEST_SIZE_MPI, MPIX_TIMES,            '-*',  label="MPIX Alltoall",  markersize=3)
+    plt.plot(TEST_SIZE_MPI, PMPI_VECTORIZED_TIMES, '--s', label="MPI Alltoallv",  markersize=3)
+    plt.plot(TEST_SIZE_MPI, MPIX_VECTORIZED_TIMES, '--+', label="MPIX Alltoallv", markersize=3)
     plt.xlabel("n")
     plt.xscale('log', base=2) # Set x-axis to logarithmic scale
     # plt.yscale('log', base=10) # Set y-axis to logarithmic scale
