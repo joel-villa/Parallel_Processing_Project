@@ -31,6 +31,7 @@ int gpu_aware_alltoall(alltoall_ftn f,
 }`
 
   - Edit `copy_to_cpu_alltoall()` to call malloc and free instead of gpuMallocHost and gpuFreeHost
+
  `int copy_to_cpu_alltoall(alltoall_ftn f,
         const void* sendbuf, 
         const int sendcount,
