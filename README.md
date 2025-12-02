@@ -11,7 +11,9 @@ Communication Performance, CPU v GPU
 - IMPORTANT: in src/heterogeneous/gpu_alltoall.c
   - Edit `gpu_aware_alltoall()` to have only the following line:
     `int ierr = f(sendbuf, sendcount, sendtype, recvbuf, recvcount, recvtype, comm);`
-    Joel's Code:
+
+
+Joel's Code:
 `// ASSUMES 1 CPU CORE PER GPU (Standard for applications)
 int gpu_aware_alltoall(alltoall_ftn f,
         const void* sendbuf, 
