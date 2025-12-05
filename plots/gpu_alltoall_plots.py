@@ -45,9 +45,9 @@ COPY_TO_CPU_NB_DELTA  = [1.250392e-05, 1.253748e-05, 1.251516e-05, 1.260944e-05,
 # Plot the old GPU times (h100)
 def plot_gpu_alltoall_old():
     #graph
-    plt.plot(TEST_SIZE_OLD, GPU_P_WISE_TIMES_OLD,       '-o',  label="GPU-Aware Pairwise Exchange",   markersize=3)
+    plt.plot(TEST_SIZE_OLD,       GPU_P_WISE_TIMES_OLD,       '-o',  label="GPU-Aware Pairwise Exchange",   markersize=3)
     plt.plot(TEST_SIZE_OLD, GPU_NON_BLOCKING_TIMES_OLD, '--*', label="GPU-Aware Nonblocking",         markersize=3)
-    plt.plot(TEST_SIZE_OLD, CTC_P_WISE_TIMES_OLD,       '-s',  label="Copy-to-CPU Pairwise Exchange", markersize=3)
+    plt.plot(TEST_SIZE_OLD,       CTC_P_WISE_TIMES_OLD,       '-s',  label="Copy-to-CPU Pairwise Exchange", markersize=3)
     plt.plot(TEST_SIZE_OLD, CTC_NON_BLOCKING_TIMES_OLD, '--+', label="Copy-to-CPU Nonblocking",       markersize=3)
     plt.xlabel("n")
     plt.xscale('log', base=2) # Set x-axis to logarithmic scale
@@ -59,10 +59,10 @@ def plot_gpu_alltoall_old():
 # CPU times (h100)
 def plot_cpu_alltoall_h100():
     #graph
-    plt.plot(TEST_SIZE_MPI, PMPI_TIMES,            '-o',  label="MPI Alltoall",   markersize=3)
-    plt.plot(TEST_SIZE_MPI, MPIX_TIMES,            '-*',  label="MPIX Alltoall",  markersize=3)
-    plt.plot(TEST_SIZE_MPI, PMPI_V_TIMES, '--s', label="MPI Alltoallv",  markersize=3)
-    plt.plot(TEST_SIZE_MPI, MPIX_V_TIMES, '--+', label="MPIX Alltoallv", markersize=3)
+    plt.plot(TEST_SIZE_MPI,   PMPI_TIMES,          '-o',   label="MPI Alltoall", markersize=3)
+    plt.plot(TEST_SIZE_MPI,   MPIX_TIMES,          '-*',  label="MPIX Alltoall", markersize=3)
+    plt.plot(TEST_SIZE_MPI, PMPI_V_TIMES,         '--s',  label="MPI Alltoallv", markersize=3)
+    plt.plot(TEST_SIZE_MPI, MPIX_V_TIMES,         '--+', label="MPIX Alltoallv", markersize=3)
     plt.xlabel("n")
     plt.xscale('log', base=2) # Set x-axis to logarithmic scale
     # plt.yscale('log', base=10) # Set y-axis to logarithmic scale
@@ -73,10 +73,10 @@ def plot_cpu_alltoall_h100():
 # Plot the GPU times for H100s
 def plot_gpu_alltoall_new_h100():
     #graph
-    plt.plot(TEST_SIZE,       GPU_P_WISE_TIMES,  '-o',   label="GPU-Aware Pairwise Exchange", markersize=3)
-    plt.plot(TEST_SIZE, GPU_NON_BLOCKING_TIMES, '--*',         label="GPU-Aware Nonblocking", markersize=3)
-    plt.plot(TEST_SIZE,       CTC_P_WISE_TIMES,  '-s', label="Copy-to-CPU Pairwise Exchange", markersize=3)
-    plt.plot(TEST_SIZE, CTC_NON_BLOCKING_TIMES, '--+',       label="Copy-to-CPU Nonblocking", markersize=3)
+    plt.plot(TEST_SIZE,       GPU_P_WISE_TIMES,  '-o',   label="GPU-Aware Pairwise Exchange (h100)", markersize=3)
+    plt.plot(TEST_SIZE, GPU_NON_BLOCKING_TIMES, '--*',         label="GPU-Aware Nonblocking (h100)", markersize=3)
+    plt.plot(TEST_SIZE,       CTC_P_WISE_TIMES,  '-s', label="Copy-to-CPU Pairwise Exchange (h100)", markersize=3)
+    plt.plot(TEST_SIZE, CTC_NON_BLOCKING_TIMES, '--+',       label="Copy-to-CPU Nonblocking (h100)", markersize=3)
     plt.xlabel("n")
     plt.xscale('log', base=2) # Set x-axis to logarithmic scale
     # plt.yscale('log', base=10) # Set y-axis to logarithmic scale
@@ -86,10 +86,10 @@ def plot_gpu_alltoall_new_h100():
 
 # Plot the GPU times for DELTA
 def plot_delta_minus_last_two():
-    plt.plot(TEST_SIZE_DELTA[:len(TEST_SIZE_DELTA) - 2:],   GPU_AWARE_PAIR_DELTA[:len(TEST_SIZE_DELTA) - 2:],  '-o',   label="GPU-Aware Pairwise Exchange", markersize=3)
-    plt.plot(TEST_SIZE_DELTA[:len(TEST_SIZE_DELTA) - 2:],     GPU_AWARE_NB_DELTA[:len(TEST_SIZE_DELTA) - 2:], '--*',         label="GPU-Aware Nonblocking", markersize=3)
-    plt.plot(TEST_SIZE_DELTA[:len(TEST_SIZE_DELTA) - 2:], COPY_TO_CPU_PAIR_DELTA[:len(TEST_SIZE_DELTA) - 2:],  '-s', label="Copy-to-CPU Pairwise Exchange", markersize=3)
-    plt.plot(TEST_SIZE_DELTA[:len(TEST_SIZE_DELTA) - 2:],   COPY_TO_CPU_NB_DELTA[:len(TEST_SIZE_DELTA) - 2:], '--+',       label="Copy-to-CPU Nonblocking", markersize=3)
+    plt.plot(TEST_SIZE_DELTA[:len(TEST_SIZE_DELTA) - 2:],   GPU_AWARE_PAIR_DELTA[:len(TEST_SIZE_DELTA) - 2:],  '-o',   label="GPU-Aware Pairwise Exchange (gh200)", markersize=3)
+    plt.plot(TEST_SIZE_DELTA[:len(TEST_SIZE_DELTA) - 2:],     GPU_AWARE_NB_DELTA[:len(TEST_SIZE_DELTA) - 2:], '--*',         label="GPU-Aware Nonblocking (gh200)", markersize=3)
+    plt.plot(TEST_SIZE_DELTA[:len(TEST_SIZE_DELTA) - 2:], COPY_TO_CPU_PAIR_DELTA[:len(TEST_SIZE_DELTA) - 2:],  '-s', label="Copy-to-CPU Pairwise Exchange (gh200)", markersize=3)
+    plt.plot(TEST_SIZE_DELTA[:len(TEST_SIZE_DELTA) - 2:],   COPY_TO_CPU_NB_DELTA[:len(TEST_SIZE_DELTA) - 2:], '--+',       label="Copy-to-CPU Nonblocking (gh200)", markersize=3)
     plt.xlabel("n")
     plt.xscale('log', base=2) # Set x-axis to logarithmic scale
     # plt.yscale('log', base=10) # Set y-axis to logarithmic scale
@@ -99,10 +99,10 @@ def plot_delta_minus_last_two():
 
 # Plot the GPU times for DELTA
 def plot_delta():
-    plt.plot(TEST_SIZE_DELTA,   GPU_AWARE_PAIR_DELTA,  '-o',   label="GPU-Aware Pairwise Exchange", markersize=3)
-    plt.plot(TEST_SIZE_DELTA,     GPU_AWARE_NB_DELTA, '--*',         label="GPU-Aware Nonblocking", markersize=3)
-    plt.plot(TEST_SIZE_DELTA, COPY_TO_CPU_PAIR_DELTA,  '-s', label="Copy-to-CPU Pairwise Exchange", markersize=3)
-    plt.plot(TEST_SIZE_DELTA,   COPY_TO_CPU_NB_DELTA, '--+',       label="Copy-to-CPU Nonblocking", markersize=3)
+    plt.plot(TEST_SIZE_DELTA,   GPU_AWARE_PAIR_DELTA,  '-o',   label="GPU-Aware Pairwise Exchange (gh200)", markersize=3)
+    plt.plot(TEST_SIZE_DELTA,     GPU_AWARE_NB_DELTA, '--*',         label="GPU-Aware Nonblocking (gh200)", markersize=3)
+    plt.plot(TEST_SIZE_DELTA, COPY_TO_CPU_PAIR_DELTA,  '-s', label="Copy-to-CPU Pairwise Exchange (gh200)", markersize=3)
+    plt.plot(TEST_SIZE_DELTA,   COPY_TO_CPU_NB_DELTA, '--+',       label="Copy-to-CPU Nonblocking (gh200)", markersize=3)
     plt.xlabel("n")
     plt.xscale('log', base=2) # Set x-axis to logarithmic scale
     # plt.yscale('log', base=10) # Set y-axis to logarithmic scale
@@ -113,10 +113,10 @@ def plot_delta():
 # Plot the GPU times vs. CPU times for H100s
 def plot_main_h100():
     #graph
-    plt.plot(    TEST_SIZE,              GPU_P_WISE_TIMES,  '-o',   label="GPU-Aware Pairwise Exchange", markersize=3)
-    plt.plot(    TEST_SIZE,        GPU_NON_BLOCKING_TIMES, '--*',         label="GPU-Aware Nonblocking", markersize=3)
-    plt.plot(    TEST_SIZE,              CTC_P_WISE_TIMES,  '-s', label="Copy-to-CPU Pairwise Exchange", markersize=3)
-    plt.plot(    TEST_SIZE,        CTC_NON_BLOCKING_TIMES, '--+',       label="Copy-to-CPU Nonblocking", markersize=3)
+    plt.plot(    TEST_SIZE,              GPU_P_WISE_TIMES,  '-o',   label="GPU-Aware Pairwise Exchange (h100)", markersize=3)
+    plt.plot(    TEST_SIZE,        GPU_NON_BLOCKING_TIMES, '--*',         label="GPU-Aware Nonblocking (h100)", markersize=3)
+    plt.plot(    TEST_SIZE,              CTC_P_WISE_TIMES,  '-s', label="Copy-to-CPU Pairwise Exchange (h100)", markersize=3)
+    plt.plot(    TEST_SIZE,        CTC_NON_BLOCKING_TIMES, '--+',       label="Copy-to-CPU Nonblocking (h100)", markersize=3)
     plt.plot(    TEST_SIZE, PMPI_TIMES[0:len(TEST_SIZE):],  '-x',                  label="MPI Alltoall", markersize=3)
     plt.xlabel("n")
     plt.xscale('log', base=2) # Set x-axis to logarithmic scale
@@ -126,15 +126,29 @@ def plot_main_h100():
     plt.show()
 
 # Plot the GPU times for DELTA against those for h100
-def plot_delta_vs_h100():
-    plt.plot(TEST_SIZE,   GPU_AWARE_PAIR_DELTA[0:len(TEST_SIZE):],  '-o',   label="GPU-Aware Pairwise Exchange(gh200)", markersize=3)
-    plt.plot(TEST_SIZE,     GPU_AWARE_NB_DELTA[0:len(TEST_SIZE):], '--*',         label="GPU-Aware Nonblocking(gh200)", markersize=3)
-    plt.plot(TEST_SIZE, COPY_TO_CPU_PAIR_DELTA[0:len(TEST_SIZE):],  '-s', label="Copy-to-CPU Pairwise Exchange(gh200)", markersize=3)
-    plt.plot(TEST_SIZE,   COPY_TO_CPU_NB_DELTA[0:len(TEST_SIZE):], '--+',       label="Copy-to-CPU Nonblocking(gh200)", markersize=3)
-    plt.plot(TEST_SIZE,                          GPU_P_WISE_TIMES,  '-o',    label="GPU-Aware Pairwise Exchange(h100)", markersize=3)
-    plt.plot(TEST_SIZE,                    GPU_NON_BLOCKING_TIMES, '--*',          label="GPU-Aware Nonblocking(h100)", markersize=3)
-    plt.plot(TEST_SIZE,                          CTC_P_WISE_TIMES,  '-s',  label="Copy-to-CPU Pairwise Exchange(h100)", markersize=3)
-    plt.plot(TEST_SIZE,                    CTC_NON_BLOCKING_TIMES, '--+',        label="Copy-to-CPU Nonblocking(h100)", markersize=3)
+def plot1_delta_vs_h100():
+    plt.plot(TEST_SIZE,   GPU_AWARE_PAIR_DELTA[0:len(TEST_SIZE):],  '-o',   label="GPU-Aware Pairwise Exchange (gh200)", markersize=5)
+    plt.plot(TEST_SIZE,     GPU_AWARE_NB_DELTA[0:len(TEST_SIZE):], '--*',         label="GPU-Aware Nonblocking (gh200)", markersize=5)
+    plt.plot(TEST_SIZE, COPY_TO_CPU_PAIR_DELTA[0:len(TEST_SIZE):],  '-s', label="Copy-to-CPU Pairwise Exchange (gh200)", markersize=5)
+    plt.plot(TEST_SIZE,   COPY_TO_CPU_NB_DELTA[0:len(TEST_SIZE):], '--+',       label="Copy-to-CPU Nonblocking (gh200)", markersize=5)
+    plt.plot(TEST_SIZE,                          GPU_P_WISE_TIMES,  '-o',    label="GPU-Aware Pairwise Exchange (h100)", markersize=5)
+    plt.plot(TEST_SIZE,                    GPU_NON_BLOCKING_TIMES, '--*',          label="GPU-Aware Nonblocking (h100)", markersize=5)
+    plt.plot(TEST_SIZE,                          CTC_P_WISE_TIMES,  '-s',  label="Copy-to-CPU Pairwise Exchange (h100)", markersize=5)
+    plt.plot(TEST_SIZE,                    CTC_NON_BLOCKING_TIMES, '--+',        label="Copy-to-CPU Nonblocking (h100)", markersize=5)
+    # plt.plot(TEST_SIZE,             PMPI_TIMES[0:len(TEST_SIZE):],  '-x',                  label="MPI Alltoall", markersize=3)
+    plt.xlabel("n")
+    plt.xscale('log', base=2) # Set x-axis to logarithmic scale
+    # plt.yscale('log', base=10) # Set y-axis to logarithmic scale
+    plt.ylabel("Time of Algorithm (seconds)")
+    plt.legend()
+    plt.show()
+
+# Plot the GPU times for DELTA against those for h100
+def plot2_delta_vs_h100():
+    plt.plot(TEST_SIZE,   GPU_AWARE_PAIR_DELTA[0:len(TEST_SIZE):],  '-o',   label="GPU-Aware Pairwise Exchange (gh200)", markersize=3)
+    plt.plot(TEST_SIZE,     GPU_AWARE_NB_DELTA[0:len(TEST_SIZE):], '--*',         label="GPU-Aware Nonblocking (gh200)", markersize=3)
+    plt.plot(TEST_SIZE,                          GPU_P_WISE_TIMES,  '-o',    label="GPU-Aware Pairwise Exchange (h100)", markersize=3)
+    plt.plot(TEST_SIZE,                    GPU_NON_BLOCKING_TIMES, '--*',          label="GPU-Aware Nonblocking (h100)", markersize=3)
     # plt.plot(TEST_SIZE,             PMPI_TIMES[0:len(TEST_SIZE):],  '-x',                  label="MPI Alltoall", markersize=3)
     plt.xlabel("n")
     plt.xscale('log', base=2) # Set x-axis to logarithmic scale
@@ -150,4 +164,5 @@ if __name__ == "__main__":
   plot_main_h100()
   plot_delta()
   plot_delta_minus_last_two()
-  plot_delta_vs_h100()
+  plot1_delta_vs_h100()
+  plot2_delta_vs_h100()
